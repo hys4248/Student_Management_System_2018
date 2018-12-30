@@ -71,7 +71,7 @@ CREATE TABLE `booktype` (
 /*Data for the table `booktype` */
 
 insert  into `booktype`(`bookTypeId`,`bookType`) values 
-(1,'马克思主义、列宁主义、毛泽东思想、邓小平理论'),
+(1,'普世价值'),
 (2,'哲学、宗教'),
 (3,'社会科学总论'),
 (4,'政治、法律'),
