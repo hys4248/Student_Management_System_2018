@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebContent/css=GBK
+encoding//WebContent/student.jsp=UTF-8
+encoding//WebContent/test.jsp=UTF-8
+encoding//WebContent/update.jsp=UTF-8
+encoding//src/ml/yompc/ListALLstudent.java=UTF-8
+encoding//src/ml/yompc/StudentDao.java=UTF-8
+encoding//src/ml/yompc/deleteStudent.java=UTF-8
+encoding//src/ml/yompc/student.java=UTF-8
+encoding//src/ml/yompc/updateservlet.java=UTF-8
+encoding//src/ml/yompc/updatestudent.java=UTF-8
+encoding/<project>=UTF-8
+encoding/WebContent=UTF-8
+separateDerivedEncodings=true
