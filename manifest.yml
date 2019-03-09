@@ -1,5 +1,0 @@
----
-applications:
-- name: sample-php-helloworld
-  random-route: true
-  memory: 512M
