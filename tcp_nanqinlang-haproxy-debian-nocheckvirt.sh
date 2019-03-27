@@ -15,7 +15,7 @@ ${Green_font}
 ${Font_suffix}"
 
 check_system(){
-	[[ -z "`cat /etc/issue | grep -iE "debian"`" ]] && echo -e "${Error} only support Debian !" && exit 1
+	[[ -z "`cat /etc/issue | grep -iE "ubuntu"`" ]] && echo -e "${Error} only support Debian !" && exit 1
 	[[ "`uname -m`" != "x86_64" ]] && echo -e "${Error} only support 64 bit !" && exit 1
 }
 
