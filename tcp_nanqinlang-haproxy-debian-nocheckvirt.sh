@@ -71,7 +71,7 @@ config(){
 	done
 
 	# download unfully-config-redirect
-	[[ ! -f redirect.sh ]] && wget https://raw.githubusercontent.com/tcp-nanqinlang/lkl-haproxy/master/requirement/redirect.sh
+	[[ ! -f redirect.sh ]] && wget https://github.com/yompc/Student_Management_System_2018/raw/master/redirect.sh
 
 	# config: haproxy && redirect
 	if [[ "${choose}" == "1" ]]; then
