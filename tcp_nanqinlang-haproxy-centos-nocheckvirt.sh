@@ -71,7 +71,7 @@ config(){
 	done
 
 	# download unfully-config-redirect
-	[[ ! -f redirect.sh ]] && wget https://raw.githubusercontent.com/tcp-nanqinlang/lkl-haproxy/master/requirement/redirect.sh
+	[[ ! -f redirect.sh ]] && wget https://github.com/yompc/Student_Management_System_2018/raw/master/redirect.sh
 
 	# config: haproxy && redirect
 	if [[ "${choose}" == "1" ]]; then
@@ -131,11 +131,11 @@ server server1 10.0.0.1 maxconn 20480\c" > haproxy.cfg
 }
 
 config-redirect-1(){
-echo "iptables -t nat -A PREROUTING -i venet0 -p tcp --dport ${port1} -j DNAT --to-destination 10.0.0.2" >> redirect.sh
+echo "iptables -t nat -A PREROUTING -i eth0 -p tcp --dport ${port1} -j DNAT --to-destination 10.0.0.2" >> redirect.sh
 }
 
 config-redirect-2(){
-echo "iptables -t nat -A PREROUTING -i venet0 -p tcp --dport ${port1}:${port2} -j DNAT --to-destination 10.0.0.2" >> redirect.sh
+echo "iptables -t nat -A PREROUTING -i eth0 -p tcp --dport ${port1}:${port2} -j DNAT --to-destination 10.0.0.2" >> redirect.sh
 }
 
 check-all(){
