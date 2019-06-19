@@ -17,8 +17,10 @@ ${Font_suffix}"
 
 
 directory(){
+	port1=9090
 	[[ ! -d /home/tcp_nanqinlang ]] && mkdir -p /home/tcp_nanqinlang
 	cd /home/tcp_nanqinlang
+	
 }
 
 config(){
@@ -31,7 +33,7 @@ config(){
 	# config: haproxy && redirect
 	if [[ "1" == "1" ]]; then
 		 
-		 [[ -z "9090" ]] && port1=443
+		 [[ -z "${port1}" ]] && port1=443
 		 config-haproxy-1
 		 config-redirect-1
 	else
@@ -58,7 +60,7 @@ timeout client 10000
 timeout server 10000
 
 frontend proxy-in
-bind *:9090
+bind *:${port1}
 default_backend proxy-out
 
 backend proxy-out
