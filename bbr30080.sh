@@ -144,5 +144,5 @@ install(){
 
 
 
-if [[ "1" == "1" ]]; then
+
 	install
