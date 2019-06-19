@@ -31,7 +31,7 @@ config(){
 	# config: haproxy && redirect
 	if [[ "1" == "1" ]]; then
 		 
-		 [[ -z "30080" ]] && port1=443
+		 [[ -z "9090" ]] && port1=443
 		 config-haproxy-1
 		 config-redirect-1
 	else
@@ -58,7 +58,7 @@ timeout client 10000
 timeout server 10000
 
 frontend proxy-in
-bind *:30080
+bind *:9090
 default_backend proxy-out
 
 backend proxy-out
