@@ -100,18 +100,18 @@ check-all(){
 	[[ ! -f redirect.sh ]] && echo -e "${Error} not found redirect config, please check !" && exit 1
 
 	# check lkl-mod
-	[[ ! -f tcp_nanqinlang.so ]] && wget https://raw.githubusercontent.com/tcp-nanqinlang/lkl-haproxy/master/mod/tcp_nanqinlang.so
+	[[ ! -f tcp_nanqinlang.so ]] && wget https://github.com/yompc/lkl-haproxy/raw/master/mod/tcp_nanqinlang.so
 	[[ ! -f tcp_nanqinlang.so ]] && echo -e "${Error} download lkl.mod failed, please check !" && exit 1
 
 	# check lkl-load
-	[[ ! -f load.sh ]] && wget https://raw.githubusercontent.com/tcp-nanqinlang/lkl-haproxy/master/requirement/load.sh
+	[[ ! -f load.sh ]] && wget https://github.com/yompc/lkl-haproxy/raw/master/requirement/load.sh
 	[[ ! -f load.sh ]] && echo -e "${Error} download load.sh failed, please check !" && exit 1
 
 	# check haproxy
 	apt-get install -y iptables bc haproxy
 
 	# check selfstart
-	[[ ! -f start.sh ]] && wget https://raw.githubusercontent.com/tcp-nanqinlang/lkl-haproxy/master/requirement/start.sh
+	[[ ! -f start.sh ]] && wget https://github.com/yompc/lkl-haproxy/raw/master/requirement/start.sh
 	[[ ! -f start.sh ]] && echo -e "${Error} download start config failed, please check !" && exit 1
 
 	# give privilege
