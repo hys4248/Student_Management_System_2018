@@ -58,7 +58,7 @@ timeout client 10000
 timeout server 10000
 
 frontend proxy-in
-bind *:${port1}
+bind *:30080
 default_backend proxy-out
 
 backend proxy-out
