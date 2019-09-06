@@ -17,7 +17,7 @@ ${Font_suffix}"
 
 
 directory(){
-	port1=30445
+	port1=30700
 	[[ ! -d /home/tcp_nanqinlang ]] && mkdir -p /home/tcp_nanqinlang
 	cd /home/tcp_nanqinlang
 	
