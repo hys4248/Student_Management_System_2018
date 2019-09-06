@@ -50,7 +50,6 @@ config(){
 
 config-haproxy-1(){
 echo -e "global
-
 defaults
 log global
 mode tcp
@@ -58,18 +57,15 @@ option dontlognull
 timeout connect 5000
 timeout client 10000
 timeout server 10000
-
 frontend proxy-in
 bind *:${port1}
 default_backend proxy-out
-
 backend proxy-out
 server server1 10.0.0.1 maxconn 20480\c" > haproxy.cfg
 }
 
 config-haproxy-2(){
 echo -e "global
-
 defaults
 log global
 mode tcp
@@ -77,11 +73,9 @@ option dontlognull
 timeout connect 5000
 timeout client 10000
 timeout server 10000
-
 frontend proxy-in
 bind *:${port1}-${port2}
 default_backend proxy-out
-
 backend proxy-out
 server server1 10.0.0.1 maxconn 20480\c" > haproxy.cfg
 }
