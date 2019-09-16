@@ -52,7 +52,7 @@ config-haproxy-1(){
 echo -e "global
 defaults
 log global
-mode http
+mode tcp
 option dontlognull
 timeout connect 5000
 timeout client 10000
